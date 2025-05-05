@@ -1,11 +1,54 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js"></script>
+
+
+    <title>mGBA</title>
 </head>
 <body>
-    
+    <header>
+        <div id="navbar">
+            <h5>Arquivo</h5>
+            <h5>Emulação</h5>
+            <h5>Áudio/Vídeo</h5>
+            <h5>Ferramentas</h5>
+
+        </div>
+    </header>
+
+    <main>
+        <div id="container">
+            <h3>Carregamento Rápido</h3>
+
+            <label class="botao">
+                <input type="file" id="ROM" accept=".gba, .zip" hidden>
+                <div class="flex">
+                    <img class="icon" src="assets/icon/arquivoIcon.svg" alt="ROM_icon">
+                    <strong>Selecionar ROM</strong>
+                </div>
+            </label>
+
+            <label class="botao">
+                <input type="file" id="BIOS" accept=".bin" hidden>
+                <div class="flex">
+                    <img class="icon" src="assets/icon/biosIcon.svg" alt="ROM_icon">
+                    <strong>Selecionar BIOS</strong>
+                </div>
+            </label>
+
+            <div class="status">
+                <p><strong>Status:</strong></p>
+                <p>• <strong>ROM carregada:</strong> <span id="romName">nenhuma</span></p>
+                <p>• <strong>BIOS conectada:</strong><span id="biosName"> nenhuma</span></p>
+              </div>
+            
+              <button id="iniciar" onclick="validarArquivos()">Iniciar</button>
+        </div>
+
+    </main>
+
 </body>
 </html>
